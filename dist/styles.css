@@ -77,3 +77,10 @@ li {
     font-size: 8rem;
 }
 
+.content_menu img{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 7rem;
+    max-width: 80%;
+}
+

@@ -1,35 +1,39 @@
-const createNav = (content) => {
+
+const addNav = (content) => {
     const nav = document.createElement("div");
     nav.className = "content_navbar";
     
-    createNavName(nav);
-    createNavMenu(nav);
+    addNavName(nav);
+    addNavMenu(nav);
     
     content.appendChild(nav);
 }
 
-const createNavName = (nav) => {
+function addNavName(nav) {
     const navName = document.createElement("div");
     navName.className = "navbar-name";
     navName.textContent = "SUSHI HERO";
     nav.appendChild(navName);
-};
+}
 
-const createNavMenu = (nav) => {
+const addNavMenu = (nav) => {
     const navMenu = document.createElement("div");
     navMenu.className = "navbar-menu";
     const navList = document.createElement("li");
 
     const navUlHome = document.createElement("ul");
     const linkHome = document.createElement("a");
+    linkHome.className = "menu-home";
     linkHome.textContent = "HOME";
 
     const navUlMenu = document.createElement("ul");
     const linkMenu = document.createElement("a");
+    linkMenu.className = "menu-menu";
     linkMenu.textContent = "MENU";
 
     const navUlContact = document.createElement("ul");
     const linkContact = document.createElement("a");
+    linkContact.className = "menu-contact";
     linkContact.textContent = "CONTACT";
     
     nav.appendChild(navMenu);
@@ -40,26 +44,34 @@ const createNavMenu = (nav) => {
     navUlHome.appendChild(linkHome);
     navUlMenu.appendChild(linkMenu);
     navUlContact.appendChild(linkContact);
-}
+};
 
-const createIntro = (content) => {
+const addIntro = (content) => {
+    const main = document.createElement("div");
+    main.className = "main";
     const intro = document.createElement("div");
     intro.className = "content_intro";
     intro.textContent = "WELCOME TO SUSHI HERO";
     const introNewPara = document.createElement("p");
     introNewPara.textContent = "JAPANESE RESTAURANT & SUSHI BAR";
 
-    content.appendChild(intro);
+    content.appendChild(main);
+    main.appendChild(intro);
     intro.appendChild(introNewPara);
-    
-}
+};
 
 const loadContent = () => {
     const content = document.querySelector(".content");
 
-    createNav(content);
-    createIntro(content);
+    addNav(content);
+    addIntro(content);
 };
 
+const eraseMain = () => {
+    const content = document.querySelector(".content");
+    const main = document.querySelector(".main");
 
-export default loadContent;
+    content.removeChild(main);
+}
+
+export {loadContent, addNav, eraseMain, addIntro};
