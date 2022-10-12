@@ -89,6 +89,7 @@ li {
     justify-content: center;
     justify-content: space-around;
     margin: 0 auto;
+    margin-top: 7rem;
     background: rgb(194, 191, 191, 0.5);
     width: 50%;
     padding: 5rem;
@@ -108,5 +109,5 @@ li {
 .contact-text {
     font: 2.6rem;
     font-weight: normal;
-    color: rgb(39, 39, 39);
+    color: #272727;
 }
