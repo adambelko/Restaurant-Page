@@ -84,3 +84,29 @@ li {
     max-width: 80%;
 }
 
+.main_contact {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 0 auto;
+    background: rgb(194, 191, 191, 0.5);
+    width: 50%;
+    padding: 5rem;
+    border-radius: 10px;
+}
+
+.contact-address,
+.contact-phone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.contact-text {
+    font: 2.6rem;
+    font-weight: normal;
+    color: rgb(39, 39, 39);
+}
