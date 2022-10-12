@@ -1,3 +1,4 @@
+import addContact from "./contact";
 import {addIntro, loadContent} from "./homepage";
 import addMenu from "./menu";
 loadContent();
@@ -14,6 +15,12 @@ const swithMenuTabs = () => {
     home.addEventListener("click", (e) => {
         eraseMain();
         addIntro(content);
+    });
+
+    const contact = document.querySelector(".menu-contact");
+    contact.addEventListener("click", (e) => {
+        eraseMain();
+        addContact();
     });
 };
 
