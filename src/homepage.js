@@ -2,19 +2,17 @@
 const addNav = (content) => {
     const nav = document.createElement("div");
     nav.className = "content_navbar";
-    
     addNavName(nav);
     addNavMenu(nav);
-    
     content.appendChild(nav);
-}
+};
 
-function addNavName(nav) {
+const addNavName = (nav) => {
     const navName = document.createElement("div");
     navName.className = "navbar-name";
     navName.textContent = "SUSHI HERO";
     nav.appendChild(navName);
-}
+};
 
 const addNavMenu = (nav) => {
     const navMenu = document.createElement("div");
@@ -54,7 +52,7 @@ const addIntro = (content) => {
     intro.textContent = "WELCOME TO SUSHI HERO";
     const introNewPara = document.createElement("p");
     introNewPara.textContent = "JAPANESE RESTAURANT & SUSHI BAR";
-
+    
     content.appendChild(main);
     main.appendChild(intro);
     intro.appendChild(introNewPara);
@@ -62,16 +60,8 @@ const addIntro = (content) => {
 
 const loadContent = () => {
     const content = document.querySelector(".content");
-
     addNav(content);
     addIntro(content);
 };
 
-const eraseMain = () => {
-    const content = document.querySelector(".content");
-    const main = document.querySelector(".main");
-
-    content.removeChild(main);
-}
-
-export {loadContent, addNav, eraseMain, addIntro};
+export {loadContent, addNav, addIntro};

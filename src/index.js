@@ -1,8 +1,9 @@
-import {eraseMain, addIntro, loadContent} from "./homepage";
+import {addIntro, loadContent} from "./homepage";
 import addMenu from "./menu";
 loadContent();
 
-const swithTabs = () => {
+const swithMenuTabs = () => {
+    const content = document.querySelector(".content");
     const menu = document.querySelector(".menu-menu");
     menu.addEventListener("click", (e) => {
         eraseMain();
@@ -11,10 +12,15 @@ const swithTabs = () => {
 
     const home = document.querySelector(".menu-home");
     home.addEventListener("click", (e) => {
-        const content = document.querySelector(".content");
         eraseMain();
         addIntro(content);
     });
 };
 
-swithTabs();
+const eraseMain = () => {
+    const content = document.querySelector(".content");
+    const main = document.querySelector(".main");
+    content.removeChild(main);
+};
+
+swithMenuTabs();
