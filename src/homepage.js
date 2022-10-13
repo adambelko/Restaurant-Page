@@ -2,54 +2,43 @@
 const addNav = (content) => {
     const nav = document.createElement("div");
     nav.className = "content_navbar";
-    addNavName(nav);
-    addNavMenu(nav);
-    content.appendChild(nav);
-};
 
-const addNavName = (nav) => {
-    const navName = document.createElement("div");
-    navName.className = "navbar-name";
-    navName.textContent = "SUSHI HERO";
-    nav.appendChild(navName);
-};
-
-const addNavMenu = (nav) => {
     const navMenu = document.createElement("div");
     navMenu.className = "navbar-menu";
-    const navList = document.createElement("li");
+    const navMenuList = document.createElement("li");
 
-    const navUlHome = document.createElement("ul");
-    const linkHome = document.createElement("a");
-    linkHome.className = "menu-home";
-    linkHome.textContent = "HOME";
+    addRestaurantName(nav);
+    addNavMenuListItem("home", navMenuList);
+    addNavMenuListItem("menu", navMenuList);
+    addNavMenuListItem("contact", navMenuList);
 
-    const navUlMenu = document.createElement("ul");
-    const linkMenu = document.createElement("a");
-    linkMenu.className = "menu-menu";
-    linkMenu.textContent = "MENU";
-
-    const navUlContact = document.createElement("ul");
-    const linkContact = document.createElement("a");
-    linkContact.className = "menu-contact";
-    linkContact.textContent = "CONTACT";
-    
+    content.appendChild(nav);
     nav.appendChild(navMenu);
-    navMenu.appendChild(navList);
-    navList.appendChild(navUlHome);
-    navList.appendChild(navUlMenu);
-    navList.appendChild(navUlContact);
-    navUlHome.appendChild(linkHome);
-    navUlMenu.appendChild(linkMenu);
-    navUlContact.appendChild(linkContact);
+    navMenu.appendChild(navMenuList);
+};
+
+const addRestaurantName = (nav) => {
+    const restaurantName = document.createElement("div");
+    restaurantName.className = "navbar-restaurant-name";
+    restaurantName.textContent = "SUSHI HIRO";
+    nav.appendChild(restaurantName);
+};
+
+const addNavMenuListItem = (text, navMenuList) => {
+    const navListItem = document.createElement("ul");
+    const listItemLink = document.createElement("a");
+    listItemLink.className = `menu-${text}`;
+    listItemLink.textContent = text.toUpperCase();
+    navMenuList.appendChild(navListItem);
+    navListItem.appendChild(listItemLink);
 };
 
 const addIntro = (content) => {
     const main = document.createElement("div");
     main.className = "main";
     const intro = document.createElement("div");
-    intro.className = "content_intro";
-    intro.textContent = "WELCOME TO SUSHI HERO";
+    intro.className = "main_intro";
+    intro.textContent = "WELCOME TO SUSHI HIRO";
     const introNewPara = document.createElement("p");
     introNewPara.textContent = "JAPANESE RESTAURANT & SUSHI BAR";
     
