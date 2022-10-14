@@ -6,30 +6,35 @@ const addContact = () => {
     const contactPage = document.createElement("div");
     contactPage.className = "main_contact";
 
-    const addressColumn = document.createElement("div");
-    addressColumn.className = "contact-address";
-    addressColumn.textContent = "Address:";
-    const addressParaOne = document.createElement("p");
-    addressParaOne.className = "contact-text";
-    addressParaOne.textContent = "127a Pacific Pde"
-    const addressParaTwo = document.createElement("p");
-    addressParaTwo.className = "contact-text";
-    addressParaTwo.textContent = "Dee Why";
+    const address = ["127a Pacific Pde", "Narrabeen", "2099 NSW Australia"];
+    const contactNumber = ["0415 372 554"];
 
-    const contactColumn = document.createElement("div");
-    contactColumn.className = "contact-phone";
-    contactColumn.textContent = "Phone Contact:";
-    const contactParaOne = document.createElement("p");
-    contactParaOne.className = "contact-text";
-    contactParaOne.textContent = "0415 372 554";
+    const addressHeader = createContactHeader("address", "Address: ");
+    addText(address, addressHeader);
+
+    const contactHeader = createContact("phone", "Contact: ");
+    addText(contactNumber, contactHeader);
 
     content.appendChild(main);
     main.appendChild(contactPage);
-    contactPage.appendChild(addressColumn);
-    contactPage.appendChild(contactColumn);
-    addressColumn.appendChild(addressParaOne);
-    addressColumn.appendChild(addressParaTwo);
-    contactColumn.appendChild(contactParaOne);
+    contactPage.appendChild(addressHeader);
+    contactPage.appendChild(contactHeader);
+};
+
+const createContactHeader = (type, text) => {
+    const header = document.createElement("div");
+    header.className = `contact-${type}`;
+    header.textContent = text;
+    return header;
+};
+
+const addText = (text, parentElement) => {
+    text.forEach(string => {
+        const para = document.createElement("p");
+        para.className = "contact-text";
+        para.textContent = string;
+        parentElement.appendChild(para);
+    });
 };
 
 export default addContact;
