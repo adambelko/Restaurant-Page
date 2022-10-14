@@ -1,12 +1,12 @@
 {
   "name": "restaurant-page",
   "version": "1.0.0",
-  "description": "",
+  "description": "Restauratnt Page created with modules",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Adam Belko",
   "license": "ISC",
   "devDependencies": {
     "webpack": "^5.74.0",
