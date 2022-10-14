@@ -11,6 +11,6 @@ const addMenu = () => {
     content.appendChild(main);
     main.appendChild(contentMenu);
     contentMenu.appendChild(menuImg);
-}
+};
 
 export default addMenu;
