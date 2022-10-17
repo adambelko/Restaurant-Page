@@ -156,7 +156,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _con
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst addMenu = () => {\n    const content = document.querySelector(\".content\");\n    const main = document.createElement(\"div\");\n    main.className = \"main\";\n    \n    const contentMenu = document.createElement(\"div\");\n    contentMenu.className = \"content_menu\";\n    const menuImg = document.createElement(\"img\");\n    menuImg.src = \"../images/Sushi-Hero-Menu.jpg\";\n    \n    content.appendChild(main);\n    main.appendChild(contentMenu);\n    contentMenu.appendChild(menuImg);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addMenu);\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _images_Sushi_Hero_Menu_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../images/Sushi-Hero-Menu.jpg */ \"./images/Sushi-Hero-Menu.jpg\");\n\n\nconst addMenu = () => {\n    const content = document.querySelector(\".content\");\n    const main = document.createElement(\"div\");\n    main.className = \"main\";\n    \n    const contentMenu = document.createElement(\"div\");\n    contentMenu.className = \"content_menu\";\n    const menuImg = document.createElement(\"img\");\n    menuImg.src = _images_Sushi_Hero_Menu_jpg__WEBPACK_IMPORTED_MODULE_0__;\n    \n    content.appendChild(main);\n    main.appendChild(contentMenu);\n    contentMenu.appendChild(menuImg);\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addMenu);\n\n//# sourceURL=webpack://restaurant-page/./src/menu.js?");
+
+/***/ }),
+
+/***/ "./images/Sushi-Hero-Menu.jpg":
+/*!************************************!*\
+  !*** ./images/Sushi-Hero-Menu.jpg ***!
+  \************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"00e8f4ecd1d42b511d4d.jpg\";\n\n//# sourceURL=webpack://restaurant-page/./images/Sushi-Hero-Menu.jpg?");
 
 /***/ }),
 

@@ -1,3 +1,5 @@
+import menu from "../images/Sushi-Hero-Menu.jpg";
+
 const addMenu = () => {
     const content = document.querySelector(".content");
     const main = document.createElement("div");
@@ -6,7 +8,7 @@ const addMenu = () => {
     const contentMenu = document.createElement("div");
     contentMenu.className = "content_menu";
     const menuImg = document.createElement("img");
-    menuImg.src = "../images/Sushi-Hero-Menu.jpg";
+    menuImg.src = menu;
     
     content.appendChild(main);
     main.appendChild(contentMenu);
