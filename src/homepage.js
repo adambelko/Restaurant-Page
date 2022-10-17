@@ -1,3 +1,4 @@
+import './styles.css';
 
 const addNav = (content) => {
     const nav = document.createElement("div");

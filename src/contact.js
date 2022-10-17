@@ -12,7 +12,7 @@ const addContact = () => {
     const addressHeader = createContactHeader("address", "Address: ");
     addText(address, addressHeader);
 
-    const contactHeader = createContact("phone", "Contact: ");
+    const contactHeader = createContactHeader("phone", "Contact: ");
     addText(contactNumber, contactHeader);
 
     content.appendChild(main);
